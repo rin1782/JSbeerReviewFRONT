@@ -1,6 +1,7 @@
 const baseURL = "http://localhost:3000/"
 const beerContainer = document.querySelector("#beers-list")
 const beerPage = document.querySelector("#beer-show")
+const home = document.getElementById("home")
 
 
 class Beer {
@@ -33,7 +34,7 @@ class Beer {
 
     addToDom(){
         let beerName = document.createElement('li');
-        beerName.innerText = this.name
+        beerName.innerText = this.name 
         beerName.id = `beer-${this.id}`
         beerContainer.appendChild(beerName)
         beerName.addEventListener('click',(e) => this.handleClick(e))
@@ -45,7 +46,7 @@ class Beer {
         beerLi.innerText = this.name
         div.appendChild(beerLi)
         beerPage.prepend(div)
-        let input = document.createElement('input')
+        let input = document.createElement('input');
         input.type="hidden"
         input.value= this.id
         input.id="beer_id"

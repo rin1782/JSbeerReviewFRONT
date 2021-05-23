@@ -58,7 +58,9 @@ class Review {
     static listenForEvents(){
         newReview.addEventListener('click', this.showForm)
         reviewForm.addEventListener('submit', (e) => Review.createReview(e))
+        home.addEventListener('click', this.goHome)
     }
+
 
     static showForm(){
         newReview.style.display="none"
@@ -67,6 +69,11 @@ class Review {
 
     addToDom(){
         this.reviewsList.appendChild(this.setElementHTML())
+    }
+
+    static goHome(){
+        beerPage.style.display="none"
+        beerContainer.style.display=""
     }
 
     setElementHTML(){
