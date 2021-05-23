@@ -6,30 +6,19 @@
     <title>BeerRater</title>
 </head>
 <body>
-    <div id="Header">
-        <h1>Welcome to BeerRater</h1>
-    </div>
-        
-            <div id="beerList">
-                
-            </div>
-
-            
-
-   
-        <div id="newBeer">
-            <h3>Don't see what you're drinkin? Add it here!</h3>
-            <form id="beerForm">
-                <input type="text" id="beerInput">
-                <input type="submit" value="Add Beer">
-            </form>
-        </div>
-
-            
-   
-        
-        
-        <script src="src/beer.js"></script>
-        <script src="src/index.js"></script>
+  <div id="beers-list" >
+    <h1>Welcome to BeerRater</h1>
+</div>
+<div id="beer-show" style="display:none">
+    <button id="new-review">New Review</button>
+    <form id="review-form" style="display:none">
+        <input type="text" name="content" id="content">
+        <input type="submit" value="Create Review">
+    </form>
+    <div id="reviews-list"></div>
+</div>
+<script type="text/javascript" src="src/review.js"></script>
+<script type="text/javascript" src="src/beer.js"></script>
+<script type="text/javascript" src="src/index.js"></script>
 </body>
 </html>
