@@ -35,11 +35,14 @@ class Beer {
 
     addToDom(){
         let beerName = document.createElement('h3');
+        let revBtn = document.createElement('button')
+        revBtn.innerText = "Reviews"
+        revBtn.id = `beer-${this.id}`
         beerName.innerText = this.name 
-        beerName.id = `beer-${this.id}`
+        beerName.appendChild(revBtn)
         allBeers.appendChild(beerName)
         beerContainer.appendChild(allBeers)
-        beerName.addEventListener('click',(e) => this.handleClick(e))
+        revBtn.addEventListener('click',(e) => this.handleClick(e))
     }
 
     addToBeerPage(){
